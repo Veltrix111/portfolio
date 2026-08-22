@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
 <meta name="description"
 content="Keyur Ghantala — Mechanical Engineer, QA, Export, ERP and Operations professional.">
 
-<title>KEYUR GHANTALA — PROFESSIONAL PORTFOLIO</title>
+<title>KEYUR GHANTALA</title>
 
 <style>
 
@@ -407,6 +408,7 @@ main{
 
 /* =========================================================
    HERO
+   PHOTO LEFT / CONTENT RIGHT
 ========================================================= */
 
 .hero{
@@ -416,7 +418,7 @@ main{
 
   display:grid;
 
-  grid-template-columns:1.05fr .95fr;
+  grid-template-columns:.95fr 1.05fr;
 
   gap:5vw;
 
@@ -460,9 +462,14 @@ main{
   }
 }
 
+/* CONTENT — RIGHT SIDE */
+
 .hero-copy{
   position:relative;
   z-index:4;
+
+  grid-column:2;
+  grid-row:1;
 }
 
 .eyebrow{
@@ -623,11 +630,14 @@ main{
 }
 
 /* =========================================================
-   HERO PHOTO — NO FRAME
+   HERO PHOTO — LEFT / NO FRAME
 ========================================================= */
 
 .hero-visual{
   position:relative;
+
+  grid-column:1;
+  grid-row:1;
 
   display:flex;
   justify-content:center;
@@ -691,12 +701,7 @@ main{
   }
 }
 
-/*
-   IMPORTANT:
-   NO FRAME
-   NO BORDER
-   PHOTO FADE INTO BACKGROUND
-*/
+/* NO FRAME / NO BORDER / FADE */
 
 .portrait{
   position:relative;
@@ -727,10 +732,6 @@ main{
   filter:
     contrast(1.04)
     saturate(.9);
-
-  /*
-    Fade edges into page
-  */
 
   -webkit-mask-image:
     radial-gradient(
@@ -763,10 +764,6 @@ main{
     saturate(1);
 }
 
-/*
-  EXTRA DARK/GOLD FADE OVER PHOTO
-*/
-
 .portrait:after{
   content:"";
 
@@ -787,10 +784,6 @@ main{
 
   z-index:2;
 }
-
-/*
-  Bottom fade
-*/
 
 .portrait:before{
   content:"";
@@ -1087,7 +1080,7 @@ main{
 }
 
 /* =========================================================
-   REVEAL ANIMATION
+   REVEAL
 ========================================================= */
 
 .reveal{
@@ -1740,7 +1733,20 @@ main{
     padding-top:70px;
   }
 
+  /*
+     MOBILE:
+     Content first, photo below
+  */
+
+  .hero-copy{
+    grid-column:1;
+    grid-row:1;
+  }
+
   .hero-visual{
+    grid-column:1;
+    grid-row:2;
+
     min-height:520px;
 
     margin-top:10px;
@@ -1926,6 +1932,7 @@ main{
   .scroll{
     display:none;
   }
+
 }
 
 /* =========================================================
@@ -2029,6 +2036,10 @@ main{
 
 <section class="hero">
 
+  <!-- =================================================
+       CONTENT — RIGHT SIDE
+  ================================================= -->
+
   <div class="hero-copy">
 
     <p class="eyebrow reveal">
@@ -2082,7 +2093,7 @@ main{
 
 
   <!-- =================================================
-       PHOTO
+       PHOTO — LEFT SIDE
   ================================================= -->
 
   <div class="hero-visual reveal">
@@ -2093,7 +2104,6 @@ main{
 
       <div class="portrait">
 
-        <!-- YOUR PHOTO -->
         <img
           src="keyur-photo.png"
           alt="Keyur Ghantala"
@@ -2263,9 +2273,6 @@ main{
         process design, NPI and project execution.
       </p>
 
-      <div class="signature">
-        KEYUR<span>_</span>
-      </div>
 
     </div>
 
@@ -2355,7 +2362,6 @@ main{
 
 
   <div class="timeline">
-
 
     <article class="job reveal">
 
@@ -2623,7 +2629,6 @@ main{
 
     </article>
 
-
   </div>
 
 </section>
@@ -2660,7 +2665,6 @@ main{
 
 
     <div class="skill-list">
-
 
       <div class="skill reveal">
 
@@ -2792,7 +2796,6 @@ main{
 
       </div>
 
-
     </div>
 
   </div>
@@ -2829,7 +2832,6 @@ main{
 
   <div class="edu-grid">
 
-
     <article class="edu reveal">
 
       <span>
@@ -2864,44 +2866,6 @@ main{
       </p>
 
     </article>
-
-
-    <article class="edu reveal">
-
-      <span>
-        03 / SCOPE
-      </span>
-
-      <h3>
-        TECHNICAL SCOPE
-      </h3>
-
-      <p>
-        Mechanical engineering, manufacturing, QA,
-        export, logistics, ERP and operational management.
-      </p>
-
-    </article>
-
-
-    <article class="edu reveal">
-
-      <span>
-        04 / OBJECTIVE
-      </span>
-
-      <h3>
-        LEADERSHIP PATH
-      </h3>
-
-      <p>
-        Grow into a challenging leadership position
-        applying creative problem solving and lean
-        management skills.
-      </p>
-
-    </article>
-
 
   </div>
 
@@ -3111,9 +3075,7 @@ main{
       </small>
 
       <strong>
-        Gariadhar, Bhavnagar - 364505
-        <br>
-        Brahmani Nagar-1, Navagam Road
+        Rajkot, Gujarat 360005
       </strong>
 
     </div>
@@ -3124,16 +3086,13 @@ main{
   <div class="footer">
 
     <span>
-      © 2026 KEYUR GHANTALA
+	KEYUR GHANTALA
     </span>
 
     <span>
       MECHANICAL · QA · EXPORT · OPERATIONS
     </span>
 
-    <span>
-      PORTFOLIO / V7
-    </span>
 
   </div>
 
@@ -3549,3 +3508,4 @@ window.addEventListener(
 
 </body>
 </html>
+```
